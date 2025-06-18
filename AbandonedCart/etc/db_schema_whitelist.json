@@ -1,0 +1,8 @@
+{
+    "quote": {
+        "column": {
+            "pw_sync_status": true,
+            "pw_synced_date": true
+        }
+    }
+}

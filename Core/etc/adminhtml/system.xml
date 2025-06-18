@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="pushwoosh" translate="label" sortOrder="10000">
+            <label>Pushwoosh</label>
+        </tab>
+        <section id="pushwoosh" translate="label" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Configuration</label>
+            <tab>pushwoosh</tab>
+            <resource>Pushwoosh_Core::config_pushwoosh</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                <label>General</label>
+                <field id="version" translate="label" type="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Current Version</label>
+                    <backend_model>Pushwoosh\Core\Block\Adminhtml\System\Config\Version</backend_model>
+                </field>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="api_url" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInStore="1">
+                    <label>API URL</label>
+                    <validate>required-entry validate-url validate-no-html-tags</validate>
+                    <comment>Example: https://api.pushwoosh.com</comment>
+                </field>
+                <field id="api_key" translate="label" type="text" sortOrder="30" showInDefault="1" showInStore="1">
+                    <label>API Key</label>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="app_code" translate="label" type="text" sortOrder="40" showInDefault="1" showInStore="1">
+                    <label>App Code</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: XXXXX-XXXXX</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

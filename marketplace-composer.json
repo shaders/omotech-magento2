@@ -1,0 +1,16 @@
+{
+  "name": "pushwoosh/magento2-integration",
+  "description": "Pushwoosh extension for Magento 2.3 and 2.4",
+  "type": "metapackage",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0"
+  ],
+  "require": {
+    "pushwoosh/core": "1.0.*",
+    "pushwoosh/customer": "1.0.*",
+    "pushwoosh/abandonedcart": "1.0.*",
+    "pushwoosh/order": "1.0.*",
+    "pushwoosh/web": "1.0.*"
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="quote" resource="default" engine="innodb">
+        <column xsi:type="int" name="pw_sync_status" default="0" padding="10" unsigned="true" nullable="false"
+                comment="Pushwoosh Sync Status"/>
+        <column xsi:type="timestamp" name="pw_synced_date" on_update="false" nullable="true" comment="Pushwoosh sync date"/>
+    </table>
+</schema>

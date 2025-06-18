@@ -1,0 +1,34 @@
+<?php
+
+use Pushwoosh\Web\Block\PushwooshWeb;
+
+/**
+ * @var PushwooshWeb $block
+ */
+$helper = $block->getHelper();
+if (!$helper->isEnabled()) { return; }
+$email = $block->getCustomerEmail();
+?>
+
+<script type="text/javascript" src="https://cdn.pushwoosh.com/webpush/v3/pushwoosh-web-notifications.js" async></script>
+<script type="text/javascript">
+    var Pushwoosh = Pushwoosh || [];
+    var pushwooshConfig = {
+        logLevel: 'info',
+        applicationCode: "<?= $block->escapeHtml(__($helper->getApplicationCode())) ?>",
+        apiToken: "<?= $block->escapeHtml(__($helper->getApiToken())) ?>",
+        safariWebsitePushID: 'web.com.example.domain',
+        defaultNotificationTitle: 'Pushwoosh',
+        defaultNotificationImage: 'https://yoursite.com/img/logo-medium.png',
+        scope: '/',
+        serviceWorkerUrl: '/pushwoosh_web/serviceworker/index',
+    }
+
+    Pushwoosh.push(['init', pushwooshConfig]);
+
+    <?php if ($email): ?>
+    Pushwoosh.push(['onReady', function(api){
+        api.registerUser("<?= $block->escapeHtml(__($email)) ?>");
+    }]);
+    <?php endif; ?>
+</script>
