@@ -1,9 +1,9 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Cron;
+namespace Omotech\AbandonedCart\Cron;
 
-use Pushwoosh\AbandonedCart\Helper\Data as AbandonedCartHelper;
-use Pushwoosh\AbandonedCart\Model\AbandonedCartSendData;
+use Omotech\AbandonedCart\Helper\Data as AbandonedCartHelper;
+use Omotech\AbandonedCart\Model\AbandonedCartSendData;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
 

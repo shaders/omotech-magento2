@@ -1,10 +1,10 @@
 <?php
-namespace Pushwoosh\Order\Observer;
+namespace Omotech\Order\Observer;
 
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Order\Helper\Data as PushwooshOrderHelper;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
-use Pushwoosh\Order\Model\OrderData\OrderDataSend;
+use Omotech\Core\Helper\Curl;
+use Omotech\Order\Helper\Data as OmotechOrderHelper;
+use Omotech\Core\Logger\Logger as OmotechLogger;
+use Omotech\Order\Model\OrderData\OrderDataSend;
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -17,9 +17,9 @@ class OrderSync implements ObserverInterface
     public const URL_ENDPOINT = "ecomOrders/";
 
     /**
-     * @var PushwooshOrderHelper
+     * @var OmotechOrderHelper
      */
-    private $pushwooshHelper;
+    private $omotechHelper;
 
     /**
      * @var OrderDataSend
@@ -36,7 +36,7 @@ class OrderSync implements ObserverInterface
      */
     protected $quoteRepository;
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
     /**
@@ -48,22 +48,22 @@ class OrderSync implements ObserverInterface
      * OrderSync constructor.
      * @param OrderDataSend $orderDataSend
      * @param Curl $curl
-     * @param PushwooshOrderHelper $pushwooshHelper
+     * @param OmotechOrderHelper $omotechHelper
      * @param OrderModel $orderModel
      * @param CartRepositoryInterface $quoteRepository
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      */
     public function __construct(
         OrderDataSend           $orderDataSend,
         Curl                    $curl,
-        PushwooshOrderHelper    $pushwooshHelper,
+        OmotechOrderHelper    $omotechHelper,
         OrderModel              $orderModel,
         CartRepositoryInterface $quoteRepository,
-        PushwooshLogger         $logger
+        OmotechLogger         $logger
     ) {
         $this->orderDataSend = $orderDataSend;
         $this->curl = $curl;
-        $this->pushwooshHelper = $pushwooshHelper;
+        $this->omotechHelper = $omotechHelper;
         $this->orderModel = $orderModel;
         $this->quoteRepository = $quoteRepository;
         $this->logger = $logger;
@@ -75,7 +75,7 @@ class OrderSync implements ObserverInterface
      */
     public function execute(Observer $observer)
     {
-        $synInRealTime = $this->pushwooshHelper->isOrderSyncInRealTime();
+        $synInRealTime = $this->omotechHelper->isOrderSyncInRealTime();
         if (!$synInRealTime) {
             return;
         }

@@ -1,14 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Core\Helper;
+namespace Omotech\Core\Helper;
 
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-    public const PUSHWOOSH_GENERAL_STATUS = 'pushwoosh/general/status';
-    public const PUSHWOOSH_GENERAL_API_URL = 'pushwoosh/general/api_url';
-    public const PUSHWOOSH_GENERAL_API_KEY = 'pushwoosh/general/api_key';
-    public const PUSHWOOSH_GENERAL_APP_CODE = 'pushwoosh/general/app_code';
+    public const OMOTECH_GENERAL_STATUS = 'omotech/general/status';
+    public const OMOTECH_GENERAL_API_KEY = 'omotech/general/api_key';
+    public const OMOTECH_GENERAL_APP_CODE = 'omotech/general/app_code';
 
 
     /**
@@ -56,7 +55,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function isEnabled( $scopeCode = null): bool
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_GENERAL_STATUS,
+            self::OMOTECH_GENERAL_STATUS,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -71,11 +70,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getApiUrl( $scopeCode = null): ?string
     {
-        return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_GENERAL_API_URL,
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORES,
-            $scopeCode
-        );
+        return 'https://api.pushwoosh.com';
     }
 
     /**
@@ -88,7 +83,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getApiKey( $scopeCode = null): ?string
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_GENERAL_API_KEY,
+            self::OMOTECH_GENERAL_API_KEY,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -104,7 +99,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getAppCode($scopeCode = null): ?string
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_GENERAL_APP_CODE,
+            self::OMOTECH_GENERAL_APP_CODE,
             \Magento\Store\Model\ScopeInterface::SCOPE_STORES,
             $scopeCode
         );

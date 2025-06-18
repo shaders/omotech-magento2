@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Plugin\Checkout\Controller\Cart;
+namespace Omotech\AbandonedCart\Plugin\Checkout\Controller\Cart;
 
 use Magento\Framework\App\Action\HttpGetActionInterface as HttpGetActionInterface;
 use Magento\Framework\App\Helper\AbstractHelper;

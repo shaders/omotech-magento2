@@ -1,11 +1,11 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Model;
+namespace Omotech\AbandonedCart\Model;
 
-use Pushwoosh\AbandonedCart\Helper\Data as AbandonedCartHelper;
-use Pushwoosh\AbandonedCart\Model\Config\CronConfig;
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Core\Helper\Data as CoreHelper;
+use Omotech\AbandonedCart\Helper\Data as AbandonedCartHelper;
+use Omotech\AbandonedCart\Model\Config\CronConfig;
+use Omotech\Core\Helper\Curl;
+use Omotech\Core\Helper\Data as CoreHelper;
 use GuzzleHttp\Exception\GuzzleException;
 use Magento\Catalog\Api\ProductRepositoryInterfaceFactory;
 use Magento\Catalog\Helper\ImageFactory;
@@ -30,8 +30,8 @@ use Magento\Quote\Model\ResourceModel\Quote\Item\Collection;
 use Magento\Quote\Model\ResourceModel\Quote\Item\CollectionFactory as QuoteItemCollectionFactory;
 use Magento\Store\Model\App\Emulation as AppEmulation;
 use Magento\Store\Model\StoreManagerInterface;
-use Pushwoosh\Core\Logger\Logger;
-use Pushwoosh\Customer\Model\Customer;
+use Omotech\Core\Logger\Logger;
+use Omotech\Customer\Model\Customer;
 
 class AbandonedCartSendData extends AbstractModel
 {

@@ -7,7 +7,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <pushwoosh>
+        <omotech>
             <customer>
                 <sync>0</sync>
                 <number_of_customers>100</number_of_customers>
@@ -18,6 +18,6 @@
                 <cron_weekday>*</cron_weekday>
                 <last_customers_updated>0000:00:00 00:00:00</last_customers_updated>
             </customer>
-        </pushwoosh>
+        </omotech>
     </default>
 </config>

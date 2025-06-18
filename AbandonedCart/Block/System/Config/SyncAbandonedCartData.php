@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\AbandonedCart\Block\System\Config;
+namespace Omotech\AbandonedCart\Block\System\Config;
 
 use Magento\Backend\Block\Template\Context;
 use Magento\Quote\Model\ResourceModel\Quote\CollectionFactory as QuoteResourceCollectionFactory;
-use Pushwoosh\AbandonedCart\Model\Config\CronConfig;
+use Omotech\AbandonedCart\Model\Config\CronConfig;
 
 class SyncAbandonedCartData extends \Magento\Backend\Block\Template
 {
@@ -14,7 +14,7 @@ class SyncAbandonedCartData extends \Magento\Backend\Block\Template
     /**
      * @var string
      */
-    protected $_template = 'Pushwoosh_AbandonedCart::system/config/sync_abandoned_cart_data.phtml';
+    protected $_template = 'Omotech_AbandonedCart::system/config/sync_abandoned_cart_data.phtml';
 
     /**
      * @var QuoteResourceCollectionFactory

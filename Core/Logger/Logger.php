@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Core\Logger;
+namespace Omotech\Core\Logger;
 
 class Logger extends \Monolog\Logger
 {

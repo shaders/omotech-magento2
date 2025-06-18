@@ -1,16 +1,16 @@
 <?php
 
-namespace Pushwoosh\Web\Block;
+namespace Omotech\Web\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use Pushwoosh\Web\Helper\Data as HelperData;
+use Omotech\Web\Helper\Data as HelperData;
 use Magento\Framework\ObjectManagerInterface;
 
-class PushwooshWeb extends Template
+class OmotechWeb extends Template
 {
     /**
-     * @var \Pushwoosh\Web\Helper\Data
+     * @var \Omotech\Web\Helper\Data
      */
     protected $helperData;
     protected $objectFactory;

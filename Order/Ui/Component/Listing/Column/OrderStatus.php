@@ -1,12 +1,12 @@
 <?php
-namespace Pushwoosh\Order\Ui\Component\Listing\Column;
+namespace Omotech\Order\Ui\Component\Listing\Column;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
-use Pushwoosh\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
+use Omotech\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
 
 class OrderStatus extends Column
 {

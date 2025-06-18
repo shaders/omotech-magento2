@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Order\Block\Adminhtml\System\Config;
+namespace Omotech\Order\Block\Adminhtml\System\Config;
 
 class OrderSyncStatus extends \Magento\Backend\Block\Template
 {
@@ -14,7 +14,7 @@ class OrderSyncStatus extends \Magento\Backend\Block\Template
     /**
      * @var string
      */
-    protected $_template = 'Pushwoosh_Order::system/config/order_sync_status.phtml';
+    protected $_template = 'Omotech_Order::system/config/order_sync_status.phtml';
 
     /**
      * @var \Magento\Sales\Api\OrderRepositoryInterface

@@ -1,11 +1,11 @@
 <?php
 
-namespace Pushwoosh\Customer\Controller\Adminhtml\Customer;
+namespace Omotech\Customer\Controller\Adminhtml\Customer;
 
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Customer\Model\Config\CronConfig;
-use Pushwoosh\Customer\Model\Customer;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
+use Omotech\Core\Helper\Curl;
+use Omotech\Customer\Model\Config\CronConfig;
+use Omotech\Customer\Model\Customer;
+use Omotech\Core\Logger\Logger as OmotechLogger;
 use Magento\Backend\App\Action\Context;
 use Magento\Customer\Api\CustomerRepositoryInterface;
 use Magento\Customer\Controller\Adminhtml\Index\AbstractMassAction;
@@ -34,7 +34,7 @@ class MassSync extends AbstractMassAction implements HttpPostActionInterface
     protected $curl;
 
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
 
@@ -45,7 +45,7 @@ class MassSync extends AbstractMassAction implements HttpPostActionInterface
      * @param CollectionFactory $collectionFactory
      * @param Customer $customer
      * @param Curl $curl
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      * @param CustomerRepositoryInterface $customerRepository
      */
     public function __construct(
@@ -54,7 +54,7 @@ class MassSync extends AbstractMassAction implements HttpPostActionInterface
         CollectionFactory $collectionFactory,
         Customer $customer,
         Curl $curl,
-        PushwooshLogger $logger,
+        OmotechLogger $logger,
         CustomerRepositoryInterface $customerRepository
     ) {
         parent::__construct($context, $filter, $collectionFactory);
@@ -85,7 +85,7 @@ class MassSync extends AbstractMassAction implements HttpPostActionInterface
         }
 
         if ($customersSynced) {
-            $this->messageManager->addSuccessMessage(__('A total of %1 record(s) were synced to the Pushwoosh.', $customersSynced));
+            $this->messageManager->addSuccessMessage(__('A total of %1 record(s) were synced to the Omotech.', $customersSynced));
         }
         /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);

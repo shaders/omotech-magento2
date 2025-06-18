@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Ui\Component\Listing;
+namespace Omotech\AbandonedCart\Ui\Component\Listing;
 
 use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
 

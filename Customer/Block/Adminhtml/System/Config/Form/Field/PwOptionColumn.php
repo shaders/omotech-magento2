@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace Pushwoosh\Customer\Block\Adminhtml\System\Config\Form\Field;
+namespace Omotech\Customer\Block\Adminhtml\System\Config\Form\Field;
 
 use Magento\Framework\View\Element\Html\Select;
 
@@ -12,8 +12,8 @@ class PwOptionColumn extends Select
 
     public function __construct(
         \Magento\Framework\View\Element\Context $context,
-        \Pushwoosh\Core\Helper\Curl $curl,
-        \Pushwoosh\Core\Helper\Data $pwHelper,
+        \Omotech\Core\Helper\Curl $curl,
+        \Omotech\Core\Helper\Data $pwHelper,
         array $data = []
     ) {
         parent::__construct($context,$data);
@@ -43,7 +43,7 @@ class PwOptionColumn extends Select
         $fields=[];
 
         if($this->pwHelper->isEnabled()){
-            $tags = $this->curl->getPushwooshTags();
+            $tags = $this->curl->getOmotechTags();
             if (!isset($tags['tags']))
                 return [];
             

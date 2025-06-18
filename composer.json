@@ -1,6 +1,6 @@
 {
-    "name": "pushwoosh/magento2-integration",
-    "description": "Pushwoosh extension for Magento 2.3 and 2.4",
+    "name": "omotech/magento2-integration",
+    "description": "Omotech extension for Magento 2.3 and 2.4",
     "type": "magento2-component",
     "version": "1.0.0",
     "license": "OSL-3.0",
@@ -8,11 +8,11 @@
         "php": "~7.3.0||~7.4.0||~8.0||~8.1||~8.2||~8.3"
     },
     "replace": {
-        "pushwoosh/core": "self.version",
-        "pushwoosh/customer": "self.version",
-        "pushwoosh/abandonedcart": "self.version",
-        "pushwoosh/order": "self.version",
-        "pushwoosh/web": "self.version"
+        "omotech/core": "self.version",
+        "omotech/customer": "self.version",
+        "omotech/abandonedcart": "self.version",
+        "omotech/order": "self.version",
+        "omotech/web": "self.version"
     },
     "autoload": {
         "files": [
@@ -23,11 +23,11 @@
             "Web/registration.php"
         ],
         "psr-4": {
-            "Pushwoosh\\Core\\": "Core",
-            "Pushwoosh\\Customer\\": "Customer",
-            "Pushwoosh\\AbandonedCart\\": "AbandonedCart",
-            "Pushwoosh\\Order\\": "Order",
-            "Pushwoosh\\Web\\": "Web"
+            "Omotech\\Core\\": "Core",
+            "Omotech\\Customer\\": "Customer",
+            "Omotech\\AbandonedCart\\": "AbandonedCart",
+            "Omotech\\Order\\": "Order",
+            "Omotech\\Web\\": "Web"
         }
     },
     "minimum-stability": "dev",

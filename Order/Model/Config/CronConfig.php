@@ -1,5 +1,5 @@
 <?php
-namespace Pushwoosh\Order\Model\Config;
+namespace Omotech\Order\Model\Config;
 
 use function PHPUnit\Framework\isNull;
 

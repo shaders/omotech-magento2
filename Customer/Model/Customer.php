@@ -1,12 +1,12 @@
 <?php
 
-namespace Pushwoosh\Customer\Model;
+namespace Omotech\Customer\Model;
 
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Core\Helper\Data as CoreHelper;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
-use Pushwoosh\Customer\Helper\Data as CustomerHelper;
-use Pushwoosh\Customer\Model\Config\CronConfig;
+use Omotech\Core\Helper\Curl;
+use Omotech\Core\Helper\Data as CoreHelper;
+use Omotech\Core\Logger\Logger as OmotechLogger;
+use Omotech\Customer\Helper\Data as CustomerHelper;
+use Omotech\Customer\Model\Config\CronConfig;
 use \Magento\Customer\Api\AddressRepositoryInterface;
 use Magento\Customer\Model\CustomerFactory;
 use Magento\Customer\Model\ResourceModel\Customer as CustomerResource;
@@ -76,7 +76,7 @@ class Customer
     protected $customerRepository;
 
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
 
@@ -100,7 +100,7 @@ class Customer
      * @param Curl $curl
      * @param Attribute $eavAttribute
      * @param TypeListInterface $cacheTypeList
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      * @param SubscriberFactory $subscriberFactory
      * @param AddressRepositoryInterface $addressRepository
      */
@@ -114,7 +114,7 @@ class Customer
         Curl $curl,
         Attribute $eavAttribute,
         TypeListInterface $cacheTypeList,
-        PushwooshLogger $logger,
+        OmotechLogger $logger,
         SubscriberFactory $subscriberFactory,
         AddressRepositoryInterface $addressRepository,
         StoreManagerInterface $storeManager

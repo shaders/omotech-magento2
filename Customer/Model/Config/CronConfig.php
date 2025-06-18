@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Customer\Model\Config;
+namespace Omotech\Customer\Model\Config;
 
 class CronConfig extends \Magento\Framework\App\Config\Value
 {

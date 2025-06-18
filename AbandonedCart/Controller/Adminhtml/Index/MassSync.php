@@ -1,15 +1,15 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Controller\Adminhtml\Index;
+namespace Omotech\AbandonedCart\Controller\Adminhtml\Index;
 
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Quote\Model\ResourceModel\Quote\CollectionFactory;
-use Pushwoosh\AbandonedCart\Block\System\Config\SyncAbandonedCartData;
-use Pushwoosh\AbandonedCart\Model\AbandonedCartSendData;
-use Pushwoosh\AbandonedCart\Model\Config\CronConfig;
+use Omotech\AbandonedCart\Block\System\Config\SyncAbandonedCartData;
+use Omotech\AbandonedCart\Model\AbandonedCartSendData;
+use Omotech\AbandonedCart\Model\Config\CronConfig;
 
 class MassSync extends \Magento\Backend\App\Action implements HttpPostActionInterface
 {
@@ -18,7 +18,7 @@ class MassSync extends \Magento\Backend\App\Action implements HttpPostActionInte
      *
      * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Pushwoosh_AbandonedCart::abandonedcart_operation';
+    const ADMIN_RESOURCE = 'Omotech_AbandonedCart::abandonedcart_operation';
 
     /**
      * @var Filter

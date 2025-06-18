@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Web\Block\Adminhtml\System\Config;
+namespace Omotech\Web\Block\Adminhtml\System\Config;
 
 /**
  * Config backend model for version display.
@@ -52,7 +52,7 @@ class Version extends \Magento\Framework\App\Config\Value
      */
     public function afterLoad()
     {
-        $version = $this->moduleResource->getDbVersion('Pushwoosh_Web');
+        $version = $this->moduleResource->getDbVersion('Omotech_Web');
 
         $this->setValue($version);
     }

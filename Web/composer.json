@@ -1,6 +1,6 @@
 {
-  "name": "pushwoosh/web",
-  "description": "Pushwoosh Web",
+  "name": "omotech/web",
+  "description": "Omotech Web",
   "type": "magento2-module",
   "license": [
     "OSL-3.0",
@@ -12,14 +12,14 @@
   "version": "1.0.0",
   "require": {
     "php": "~7.3.0||~7.4.0||~8.0||~8.1||~8.2||~8.3",
-    "pushwoosh/core": "1.0.*"
+    "omotech/core": "1.0.*"
   },
   "autoload": {
     "files": [
       "registration.php"
     ],
     "psr-4": {
-      "Pushwoosh\\Web\\": ""
+      "Omotech\\Web\\": ""
     }
   }
 }

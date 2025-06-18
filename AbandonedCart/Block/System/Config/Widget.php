@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Block\System\Config;
+namespace Omotech\AbandonedCart\Block\System\Config;
 
 class Widget extends \Magento\Config\Block\System\Config\Form\Fieldset
 {

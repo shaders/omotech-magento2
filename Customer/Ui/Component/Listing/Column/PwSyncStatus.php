@@ -1,11 +1,11 @@
 <?php
 
-namespace Pushwoosh\Customer\Ui\Component\Listing\Column;
+namespace Omotech\Customer\Ui\Component\Listing\Column;
 
-use Pushwoosh\Customer\Model\Config\CronConfig;
+use Omotech\Customer\Model\Config\CronConfig;
 
 use Magento\Ui\Component\Listing\Columns\Column;
-use Pushwoosh\Customer\Model\Customer;
+use Omotech\Customer\Model\Customer;
 
 class PwSyncStatus extends Column
 {

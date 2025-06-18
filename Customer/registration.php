@@ -3,6 +3,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Pushwoosh_Customer',
+    'Omotech_Customer',
     __DIR__
 );

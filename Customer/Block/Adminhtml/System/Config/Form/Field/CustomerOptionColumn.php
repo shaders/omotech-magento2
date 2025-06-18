@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-namespace Pushwoosh\Customer\Block\Adminhtml\System\Config\Form\Field;
+namespace Omotech\Customer\Block\Adminhtml\System\Config\Form\Field;
 
 use Magento\Framework\View\Element\Html\Select;
 

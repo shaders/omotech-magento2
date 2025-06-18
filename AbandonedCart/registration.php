@@ -2,4 +2,4 @@
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Pushwoosh_AbandonedCart', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Omotech_AbandonedCart', __DIR__);

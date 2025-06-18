@@ -1,5 +1,5 @@
 <?php
-namespace Pushwoosh\Order\Helper;
+namespace Omotech\Order\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
@@ -7,9 +7,9 @@ use Magento\Store\Model\ScopeInterface;
 
 class Data extends AbstractHelper
 {
-    const PUSHWOOSH_ORDER_STATUS = "pushwoosh/order_sync/order_sync_enable";
-    const PUSHWOOSH_ORDER_SYNC_NUM = "pushwoosh/order_sync/order_sync_num";
-    const PUSHWOOSH_ORDER_SYNC_REAL_TIME = "pushwoosh/order_sync/order_sync_real_time";
+    const OMOTECH_ORDER_STATUS = "omotech/order_sync/order_sync_enable";
+    const OMOTECH_ORDER_SYNC_NUM = "omotech/order_sync/order_sync_num";
+    const OMOTECH_ORDER_SYNC_REAL_TIME = "omotech/order_sync/order_sync_real_time";
 
     /**
      * @var \Magento\Framework\App\State *
@@ -35,7 +35,7 @@ class Data extends AbstractHelper
     public function isOrderSyncEnabled($scopeCode = null)
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_ORDER_STATUS,
+            self::OMOTECH_ORDER_STATUS,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -48,7 +48,7 @@ class Data extends AbstractHelper
     public function isOrderSyncInRealTime($scopeCode = null)
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_ORDER_SYNC_REAL_TIME,
+            self::OMOTECH_ORDER_SYNC_REAL_TIME,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -61,7 +61,7 @@ class Data extends AbstractHelper
     public function getOrderSyncNum($scopeCode = null)
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_ORDER_SYNC_NUM,
+            self::OMOTECH_ORDER_SYNC_NUM,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pushwoosh\Order\Cron;
+namespace Omotech\Order\Cron;
 
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
-use Pushwoosh\Order\Helper\Data as PushwooshOrderHelper;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
-use Pushwoosh\Order\Model\OrderData\OrderDataSend;
+use Omotech\Core\Helper\Curl;
+use Omotech\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
+use Omotech\Order\Helper\Data as OmotechOrderHelper;
+use Omotech\Core\Logger\Logger as OmotechLogger;
+use Omotech\Order\Model\OrderData\OrderDataSend;
 use GuzzleHttp\Exception\GuzzleException;
 use Magento\Framework\App\State;
 use Magento\Framework\Exception\NoSuchEntityException;
@@ -16,9 +16,9 @@ use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 class OrderSyncCron
 {
     /**
-     * @var PushwooshOrderHelper
+     * @var OmotechOrderHelper
      */
-    private $pushwooshHelper;
+    private $omotechHelper;
 
     /**
      * @var OrderDataSend
@@ -45,7 +45,7 @@ class OrderSyncCron
      */
     protected $curl;
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
 
@@ -53,24 +53,24 @@ class OrderSyncCron
      * OrderSyncCron constructor.
      * @param OrderDataSend $orderDataSend
      * @param CollectionFactory $orderCollectionFactory
-     * @param PushwooshOrderHelper $pushwooshHelper
+     * @param OmotechOrderHelper $omotechHelper
      * @param State $state
      * @param Curl $curl
      * @param CartRepositoryInterface $quoteRepository
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      */
     public function __construct(
         OrderDataSend $orderDataSend,
         CollectionFactory $orderCollectionFactory,
-        PushwooshOrderHelper $pushwooshHelper,
+        OmotechOrderHelper $omotechHelper,
         State $state,
         Curl $curl,
         CartRepositoryInterface $quoteRepository,
-        PushwooshLogger $logger
+        OmotechLogger $logger
     ) {
         $this->orderDataSend = $orderDataSend;
         $this->_orderCollectionFactory = $orderCollectionFactory;
-        $this->pushwooshHelper = $pushwooshHelper;
+        $this->omotechHelper = $omotechHelper;
         $this->state = $state;
         $this->curl = $curl;
         $this->quoteRepository = $quoteRepository;
@@ -83,12 +83,12 @@ class OrderSyncCron
     public function execute(): void
     {
         try {
-            $isEnabled = $this->pushwooshHelper->isOrderSyncEnabled();
+            $isEnabled = $this->omotechHelper->isOrderSyncEnabled();
             if (!$isEnabled) {
                 return;
             }
 
-            $OrderSyncNum = $this->pushwooshHelper->getOrderSyncNum();
+            $OrderSyncNum = $this->omotechHelper->getOrderSyncNum();
             $orderCollection = $this->_orderCollectionFactory->create()
                 ->addAttributeToSelect('*')
                 ->addFieldToFilter(

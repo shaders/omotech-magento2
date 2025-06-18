@@ -19,7 +19,7 @@
             </storageConfig>
             <updateUrl path="mui/index/render"/>
         </settings>
-        <aclResource>Pushwoosh_AbandonedCart::abandonedcart_operation</aclResource>
+        <aclResource>Omotech_AbandonedCart::abandonedcart_operation</aclResource>
         <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider" name="abandoned_cart_listing_data_source">
             <settings>
                 <requestFieldName>entity_id</requestFieldName>
@@ -56,7 +56,7 @@
                 <settings>
                     <url path="pwecommerce/index/massSync"/>
                     <type>massSync</type>
-                    <label translate="true">Sync to Pushwoosh</label>
+                    <label translate="true">Sync to Omotech</label>
                 </settings>
             </action>
         </massaction>
@@ -134,12 +134,12 @@
                 <visible>true</visible>
             </settings>
         </column>
-        <column name="pw_sync_status" class="Pushwoosh\AbandonedCart\Ui\Component\Listing\Column\PwSyncStatus">
+        <column name="pw_sync_status" class="Omotech\AbandonedCart\Ui\Component\Listing\Column\PwSyncStatus">
             <settings>
                 <editor>
                     <editorType>text</editorType>
                 </editor>
-                <label translate="true">Pushwoosh Sync Status</label>
+                <label translate="true">Omotech Sync Status</label>
                 <visible>true</visible>
             </settings>
         </column>

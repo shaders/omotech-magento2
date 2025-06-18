@@ -2,12 +2,12 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
     <type name="Magento\Checkout\Model\PaymentInformationManagement">
-        <plugin name="after_guest_payment_information" type="Pushwoosh\AbandonedCart\Plugin\Checkout\Model\PaymentInformationManagementPlugin"/>
+        <plugin name="after_guest_payment_information" type="Omotech\AbandonedCart\Plugin\Checkout\Model\PaymentInformationManagementPlugin"/>
     </type>
     <type name="Magento\Checkout\Model\GuestPaymentInformationManagement">
-        <plugin name="after_guest_payment_information" type="Pushwoosh\AbandonedCart\Plugin\Checkout\Model\GuestPaymentInformationManagementPlugin"/>
+        <plugin name="after_guest_payment_information" type="Omotech\AbandonedCart\Plugin\Checkout\Model\GuestPaymentInformationManagementPlugin"/>
     </type>
-    <preference for="Magento\Quote\Model\ResourceModel\Quote\Collection" type="Pushwoosh\AbandonedCart\Model\ResourceModel\Quote\Collection" />
+    <preference for="Magento\Quote\Model\ResourceModel\Quote\Collection" type="Omotech\AbandonedCart\Model\ResourceModel\Quote\Collection" />
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
@@ -15,13 +15,13 @@
             </argument>
         </arguments>
     </type>
-    <virtualType name="Magento\Quote\Model\ResourceModel\Quote\Grid\Collection" type="Pushwoosh\AbandonedCart\Ui\Component\Listing\AbandonedCartDataProvider">
+    <virtualType name="Magento\Quote\Model\ResourceModel\Quote\Grid\Collection" type="Omotech\AbandonedCart\Ui\Component\Listing\AbandonedCartDataProvider">
         <arguments>
             <argument name="mainTable" xsi:type="string">quote</argument>
             <argument name="resourceModel" xsi:type="string">Magento\Quote\Model\ResourceModel\Quote</argument>
         </arguments>
     </virtualType>
     <type name="Magento\Checkout\Controller\Cart\Index">
-        <plugin name="pw_checkout_cart_controller" type="Pushwoosh\AbandonedCart\Plugin\Checkout\Controller\Cart\Index"/>
+        <plugin name="pw_checkout_cart_controller" type="Omotech\AbandonedCart\Plugin\Checkout\Controller\Cart\Index"/>
     </type>
 </config>

@@ -1,17 +1,17 @@
 <?php
 
-namespace Pushwoosh\Order\Controller\Adminhtml\Order;
+namespace Omotech\Order\Controller\Adminhtml\Order;
 
-use Pushwoosh\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
-use Pushwoosh\Order\Model\OrderData\OrderDataSend;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
+use Omotech\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
+use Omotech\Order\Model\OrderData\OrderDataSend;
+use Omotech\Core\Logger\Logger as OmotechLogger;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Magento\Sales\Api\OrderManagementInterface;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 use Magento\Ui\Component\MassAction\Filter;
 use Magento\Quote\Api\CartRepositoryInterface;
-use Pushwoosh\Core\Helper\Curl;
+use Omotech\Core\Helper\Curl;
 
 class MassSync extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassAction
 {
@@ -36,7 +36,7 @@ class MassSync extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassAct
     protected $curl;
 
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
 
@@ -46,7 +46,7 @@ class MassSync extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassAct
      * @param Filter $filter
      * @param OrderDataSend $orderDataSend
      * @param CollectionFactory $collectionFactory
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      * @param OrderManagementInterface $orderManagement
      */
     public function __construct(
@@ -56,7 +56,7 @@ class MassSync extends \Magento\Sales\Controller\Adminhtml\Order\AbstractMassAct
         CollectionFactory $collectionFactory,
         OrderManagementInterface $orderManagement,
         Curl $curl,
-        PushwooshLogger $logger,
+        OmotechLogger $logger,
         CartRepositoryInterface $quoteRepository
     ) {
         parent::__construct($context, $filter);

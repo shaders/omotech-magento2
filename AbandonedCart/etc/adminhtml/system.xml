@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="pushwoosh" translate="label" type="text" sortOrder="300" showInDefault="1" showInStore="1">
+        <section id="omotech" translate="label" type="text" sortOrder="300" showInDefault="1" showInStore="1">
             <group id="abandoned_cart" translate="label" type="text" sortOrder="20" showInDefault="1" showInStore="1">
                 <label>Abandoned Cart</label>
                 <field id="version" translate="label" type="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Current Version</label>
-                    <backend_model>Pushwoosh\AbandonedCart\Block\System\Config\Version</backend_model>
+                    <backend_model>Omotech\AbandonedCart\Block\System\Config\Version</backend_model>
                 </field>
                 <field id="sync" translate="label" type="select" sortOrder="10" showInDefault="1">
                     <label>Abandoned Cart Syncing</label>
@@ -18,7 +18,7 @@
                     <depends>
                         <field id="sync">1</field>
                     </depends>
-                    <backend_model>Pushwoosh\AbandonedCart\Model\Config\CronConfig</backend_model>
+                    <backend_model>Omotech\AbandonedCart\Model\Config\CronConfig</backend_model>
                 </field>
                 <field id="cron_hour" translate="label comment" type="text" sortOrder="21" showInDefault="1">
                     <label>Cron Hour</label>
@@ -62,7 +62,7 @@
                 </field>
                 <field id="pw_abandoned_cart_syncing" translate="label" sortOrder="50" showInDefault="1" >
                     <label>Sync Abandoned Cart Data</label>
-                    <frontend_model>Pushwoosh\AbandonedCart\Block\System\Config\Widget</frontend_model>
+                    <frontend_model>Omotech\AbandonedCart\Block\System\Config\Widget</frontend_model>
                     <depends>
                         <field id="sync">1</field>
                     </depends>

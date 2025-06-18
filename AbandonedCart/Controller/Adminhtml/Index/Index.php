@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Controller\Adminhtml\Index;
+namespace Omotech\AbandonedCart\Controller\Adminhtml\Index;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;

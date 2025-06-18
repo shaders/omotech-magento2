@@ -6,8 +6,8 @@
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="type" xsi:type="string">order_sync</item>
-                        <item name="label" xsi:type="string" translate="true">Sync to Pushwoosh</item>
-                        <item name="url" xsi:type="url" path="pushwoosh_order/Order/MassSync"/>
+                        <item name="label" xsi:type="string" translate="true">Sync to Omotech</item>
+                        <item name="url" xsi:type="url" path="omotech_order/Order/MassSync"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Sync Order(s)</item>
                             <item name="message" xsi:type="string" translate="true">Are you sure you want to sync selected items?</item>
@@ -18,11 +18,11 @@
         </massaction>
     </listingToolbar>
     <columns name="sales_order_columns">
-        <column name="pw_order_sync_status" class="Pushwoosh\Order\Ui\Component\Listing\Column\OrderStatus">
+        <column name="pw_order_sync_status" class="Omotech\Order\Ui\Component\Listing\Column\OrderStatus">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="visible" xsi:type="boolean">true</item>
-                    <item name="label" xsi:type="string" translate="true">Pushwoosh Sync Status</item>
+                    <item name="label" xsi:type="string" translate="true">Omotech Sync Status</item>
                 </item>
             </argument>
         </column>

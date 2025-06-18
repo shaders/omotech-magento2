@@ -1,20 +1,20 @@
 <?php
-namespace Pushwoosh\Web\Helper;
+namespace Omotech\Web\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
 use \Magento\Framework\App\Config\ConfigResource\ConfigInterface;
-use Pushwoosh\Core\Helper\Data as CoreHelper;
+use Omotech\Core\Helper\Data as CoreHelper;
 
 class Data extends AbstractHelper
 {
     /**
-     * @var \Pushwoosh\Core\Helper\Data
+     * @var \Omotech\Core\Helper\Data
      */
     protected $coreHelper;
 
-    const PUSHWOOSH_WEB_ENABLED = "pushwoosh/web/enabled";
+    const OMOTECH_WEB_ENABLED = "omotech/web/enabled";
 
     /**
      * @var \Magento\Framework\App\Config\ConfigResource\ConfigInterface
@@ -43,7 +43,7 @@ class Data extends AbstractHelper
     public function isEnabled($scopeCode = null)
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_WEB_ENABLED,
+            self::OMOTECH_WEB_ENABLED,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );

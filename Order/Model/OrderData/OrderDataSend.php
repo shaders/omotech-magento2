@@ -1,13 +1,13 @@
 <?php
-namespace Pushwoosh\Order\Model\OrderData;
+namespace Omotech\Order\Model\OrderData;
 
-use Pushwoosh\Order\Block\Adminhtml\System\Config;
-use Pushwoosh\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
-use Pushwoosh\Core\Helper\Curl;
-use Pushwoosh\Core\Logger\Logger as PushwooshLogger;
-use Pushwoosh\Core\Helper\Data as PushwooshHelper;
-use Pushwoosh\Core\Helper\Data as CoreHelper;
-use Pushwoosh\Order\Helper\Data as PushwooshOrderHelper;
+use Omotech\Order\Block\Adminhtml\System\Config;
+use Omotech\Order\Block\Adminhtml\System\Config\OrderSyncStatus;
+use Omotech\Core\Helper\Curl;
+use Omotech\Core\Logger\Logger as OmotechLogger;
+use Omotech\Core\Helper\Data as OmotechHelper;
+use Omotech\Core\Helper\Data as CoreHelper;
+use Omotech\Order\Helper\Data as OmotechOrderHelper;
 use GuzzleHttp\Exception\GuzzleException;
 use Magento\Catalog\Api\ProductRepositoryInterfaceFactory;
 use Magento\Catalog\Helper\ImageFactory;
@@ -24,19 +24,19 @@ use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Store\Model\StoreManagerInterface as StoreManagerInterface;
 use Magento\Quote\Api\CartRepositoryInterface;
-use Pushwoosh\Customer\Model\Customer;
+use Omotech\Customer\Model\Customer;
 
 class OrderDataSend
 {
     /**
-     * @var PushwooshOrderHelper
+     * @var OmotechOrderHelper
      */
-    private $pushwooshOrderHelper;
+    private $omotechOrderHelper;
 
     /**
-     * @var PushwooshHelper
+     * @var OmotechHelper
      */
-    private $pushwooshHelper;
+    private $omotechHelper;
 
     /**
      * @var ConfigInterface
@@ -54,7 +54,7 @@ class OrderDataSend
     protected $curl;
 
     /**
-     * @var PushwooshLogger
+     * @var OmotechLogger
      */
     private $logger;
 
@@ -127,11 +127,11 @@ class OrderDataSend
      * OrderDataSend constructor.
      * @param ProductRepositoryInterfaceFactory $productRepositoryFactory
      * @param ImageFactory $imageHelperFactory
-     * @param PushwooshOrderHelper $pushwooshOrderHelper
-     * @param CoreHelper $pushwooshHelper
+     * @param OmotechOrderHelper $omotechOrderHelper
+     * @param CoreHelper $omotechHelper
      * @param ConfigInterface $configInterface
      * @param Curl $curl
-     * @param PushwooshLogger $logger
+     * @param OmotechLogger $logger
      * @param CustomerRepositoryInterface $customerRepositoryInterface
      * @param StoreRepositoryInterface $storeRepository
      * @param CustomerFactory $customerFactory
@@ -148,11 +148,11 @@ class OrderDataSend
     public function __construct(
         ProductRepositoryInterfaceFactory $productRepositoryFactory,
         ImageFactory $imageHelperFactory,
-        PushwooshOrderHelper $pushwooshOrderHelper,
-        PushwooshHelper $pushwooshHelper,
+        OmotechOrderHelper $omotechOrderHelper,
+        OmotechHelper $omotechHelper,
         ConfigInterface $configInterface,
         Curl $curl,
-        PushwooshLogger $logger,
+        OmotechLogger $logger,
         CustomerRepositoryInterface $customerRepositoryInterface,
         StoreRepositoryInterface $storeRepository,
         CustomerFactory $customerFactory,
@@ -168,8 +168,8 @@ class OrderDataSend
     ) {
         $this->_productRepositoryFactory = $productRepositoryFactory;
         $this->imageHelperFactory = $imageHelperFactory;
-        $this->pushwooshOrderHelper = $pushwooshOrderHelper;
-        $this->pushwooshHelper = $pushwooshHelper;
+        $this->omotechOrderHelper = $omotechOrderHelper;
+        $this->omotechHelper = $omotechHelper;
         $this->configInterface = $configInterface;
         $this->curl = $curl;
         $this->logger = $logger;

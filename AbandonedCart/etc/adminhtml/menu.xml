@@ -2,6 +2,6 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Pushwoosh_AbandonedCart::abandonedcart_operation" title="Abandoned Carts" translate="title" module="Pushwoosh_AbandonedCart" sortOrder="20" action="pwecommerce/index/index" resource="Pushwoosh_AbandonedCart::abandonedcart_operation"/>
+        <add id="Omotech_AbandonedCart::abandonedcart_operation" title="Abandoned Carts" translate="title" module="Omotech_AbandonedCart" sortOrder="20" action="pwecommerce/index/index" resource="Omotech_AbandonedCart::abandonedcart_operation"/>
     </menu>
 </config>
