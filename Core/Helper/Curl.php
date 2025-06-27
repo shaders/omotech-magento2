@@ -42,17 +42,17 @@ class Curl extends AbstractHelper
     /**
      * Curl constructor.
      * @param Context $context
-     * @param Client $client
      * @param JsonHelper $jsonHelper
      * @param Logger $logger
      * @param Data $pushwooshHelper
+     * @param Client $client
      */
     public function __construct(
         Context              $context,
-        Client               $client = null,
         JsonHelper           $jsonHelper,
         Logger               $logger,
         PushwooshHelper      $pushwooshHelper,
+        ?Client               $client = null,
     ) {
         $this->client = $client ?: new Client();
         $this->jsonHelper = $jsonHelper;
