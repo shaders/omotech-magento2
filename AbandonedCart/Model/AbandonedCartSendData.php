@@ -330,7 +330,14 @@ class AbandonedCartSendData extends AbstractModel
                 ->getById($quoteItem->getProductId(),false,$storeId);
 
             $imageUrl = $this->imageHelperFactory->create()
-                ->init($product, 'product_thumbnail_image')->getUrl();
+                ->init($product, 'product_page_image_medium')->getUrl();
+
+            if(str_contains($imageUrl, 'images/product/placeholder') && $product->getImage()){
+                $store = $this->storeManager->getStore($storeId);
+                $baseUrl = $store->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'catalog/product';
+                $imageUrl = $baseUrl . $product->getImage();
+            }
+
             $this->appEmulation->stopEnvironmentEmulation();
             $categories = $product->getCategoryCollection()->addAttributeToSelect('name');
             $categoriesName = [];

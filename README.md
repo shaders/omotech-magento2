@@ -23,7 +23,7 @@ bin/magento cache:clean
 <!-- Write description here -->
 
 ## System Requirements
-* PHP 7.4/8
+* PHP 8+
 * Magento 2.3/2.4
 * Elastic Search 7
 * RabbitMQ
