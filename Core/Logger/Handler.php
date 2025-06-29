@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Core\Logger;
+namespace Omotech\Core\Logger;
 
 class Handler extends \Magento\Framework\Logger\Handler\Base
 {
@@ -17,5 +17,5 @@ class Handler extends \Magento\Framework\Logger\Handler\Base
      *
      * @var string
      */
-    protected $fileName = 'var/log/pushwoosh.log';
+    protected $fileName = 'var/log/omotech.log';
 }

@@ -1,16 +1,16 @@
 <?php
-namespace Pushwoosh\AbandonedCart\Helper;
+namespace Omotech\AbandonedCart\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
-use Pushwoosh\AbandonedCart\Model\Config\CronConfig;
+use Omotech\AbandonedCart\Model\Config\CronConfig;
 
 class Data extends AbstractHelper
 {
-    const PUSHWOOSH_ABANDONED_CART_SYNC = "pushwoosh/abandoned_cart/sync";
-    const ABANDONED_CART_NUMBER_OF_ABANDONED_CART = "pushwoosh/abandoned_cart/number_of_abandoned_cart";
-    const ABANDONED_CART_MIN_INACTIVE_TIME = "pushwoosh/abandoned_cart/min_inactive_time";
+    const OMOTECH_ABANDONED_CART_SYNC = "omotech/abandoned_cart/sync";
+    const ABANDONED_CART_NUMBER_OF_ABANDONED_CART = "omotech/abandoned_cart/number_of_abandoned_cart";
+    const ABANDONED_CART_MIN_INACTIVE_TIME = "omotech/abandoned_cart/min_inactive_time";
     /**
      * @param null $scopeCode
      * @return bool
@@ -18,7 +18,7 @@ class Data extends AbstractHelper
     public function isAbandonedCartSyncingEnabled($scopeCode = null): bool
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_ABANDONED_CART_SYNC,
+            self::OMOTECH_ABANDONED_CART_SYNC,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );

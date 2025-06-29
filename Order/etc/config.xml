@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <pushwoosh>
+        <omotech>
             <order_sync>
                 <order_sync_enable>0</order_sync_enable>
                 <order_sync_num>100</order_sync_num>
@@ -13,6 +13,6 @@
                 <cron_weekday>*</cron_weekday>
                 <order_sync_real_time>1</order_sync_real_time>
             </order_sync>
-        </pushwoosh>
+        </omotech>
     </default>
 </config>

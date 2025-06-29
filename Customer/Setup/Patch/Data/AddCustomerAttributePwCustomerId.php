@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Customer\Setup\Patch\Data;
+namespace Omotech\Customer\Setup\Patch\Data;
 
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Setup\CustomerSetup;
@@ -58,14 +58,14 @@ class AddCustomerAttributePwCustomerId implements DataPatchInterface, PatchRever
         /** @var $attributeSet Set */
         $attributeSet = $this->attributeSetFactory->create();
         $attributeGroupId = $attributeSet->getDefaultGroupId($attributeSetId);
-        if (!$customerSetup->getAttributeId(Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_CUSTOMER_ID)) {
+        if (!$customerSetup->getAttributeId(Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_CUSTOMER_ID)) {
             $customerSetup->addAttribute(
                 Customer::ENTITY,
-                \Pushwoosh\Customer\Model\Customer::PW_CUSTOMER_ID,
+                \Omotech\Customer\Model\Customer::PW_CUSTOMER_ID,
                 [
                     'type' => 'varchar',
                     'input' => 'hidden',
-                    'label' => 'Pushwoosh Customer Id',
+                    'label' => 'Omotech Customer Id',
                     'default' => '',
                     'required' => false,
                     'visible' => false,
@@ -79,7 +79,7 @@ class AddCustomerAttributePwCustomerId implements DataPatchInterface, PatchRever
                 ]
             );
 
-            $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_CUSTOMER_ID);
+            $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_CUSTOMER_ID);
             $attribute->addData([
                 'attribute_set_id' => $attributeSetId,
                 'attribute_group_id' => $attributeGroupId
@@ -95,7 +95,7 @@ class AddCustomerAttributePwCustomerId implements DataPatchInterface, PatchRever
         $this->moduleDataSetup->getConnection()->startSetup();
         /** @var CustomerSetup $customerSetup */
         $customerSetup = $this->customerSetupFactory->create(['setup' => $this->moduleDataSetup]);
-        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_CUSTOMER_ID);
+        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_CUSTOMER_ID);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

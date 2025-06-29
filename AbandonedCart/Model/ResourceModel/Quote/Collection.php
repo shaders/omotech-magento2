@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Model\ResourceModel\Quote;
+namespace Omotech\AbandonedCart\Model\ResourceModel\Quote;
 
 class Collection extends \Magento\Quote\Model\ResourceModel\Quote\Collection
 {

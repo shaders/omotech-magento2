@@ -1,9 +1,9 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Plugin\Checkout\Model;
+namespace Omotech\AbandonedCart\Plugin\Checkout\Model;
 
-use Pushwoosh\AbandonedCart\Helper\Data as AbandonedCartHelper;
-use Pushwoosh\AbandonedCart\Model\AbandonedCartSendData;
+use Omotech\AbandonedCart\Helper\Data as AbandonedCartHelper;
+use Omotech\AbandonedCart\Model\AbandonedCartSendData;
 
 class PaymentInformationManagementPlugin
 {

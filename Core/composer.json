@@ -1,6 +1,6 @@
 {
-    "name": "pushwoosh/core",
-    "description": "Pushwoosh Core",
+    "name": "omotech/core",
+    "description": "Omotech Core",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
@@ -18,7 +18,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Pushwoosh\\Core\\": ""
+            "Omotech\\Core\\": ""
         }
     }
 }

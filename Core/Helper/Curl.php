@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Core\Helper;
+namespace Omotech\Core\Helper;
 
-use Pushwoosh\Core\Helper\Data as PushwooshHelper;
-use Pushwoosh\Core\Logger\Logger;
+use Omotech\Core\Helper\Data as OmotechHelper;
+use Omotech\Core\Logger\Logger;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
@@ -30,46 +30,46 @@ class Curl extends AbstractHelper
     private $jsonHelper;
 
     /**
-     * @var \Pushwoosh\Core\Logger\Logger
+     * @var \Omotech\Core\Logger\Logger
      */
     private $logger;
 
     /**
-     * @var \Pushwoosh\Core\Helper\Data
+     * @var \Omotech\Core\Helper\Data
      */
-    private $pushwooshHelper;
+    private $omotechHelper;
 
     /**
      * Curl constructor.
      * @param Context $context
      * @param JsonHelper $jsonHelper
      * @param Logger $logger
-     * @param Data $pushwooshHelper
+     * @param Data $omotechHelper
      * @param Client $client
      */
     public function __construct(
         Context              $context,
         JsonHelper           $jsonHelper,
         Logger               $logger,
-        PushwooshHelper      $pushwooshHelper,
+        OmotechHelper      $omotechHelper,
         ?Client               $client = null,
     ) {
         $this->client = $client ?: new Client();
         $this->jsonHelper = $jsonHelper;
         $this->logger = $logger;
-        $this->pushwooshHelper = $pushwooshHelper;
+        $this->omotechHelper = $omotechHelper;
         parent::__construct($context);
     }
 
     /**
-     * Get Pushwoosh Tags
+     * Get Omotech Tags
      *
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getPushwooshTags(): array {
-        $apiKey = $this->pushwooshHelper->getApiKey();
-        $appCode = $this->pushwooshHelper->getAppCode();
+    public function getOmotechTags(): array {
+        $apiKey = $this->omotechHelper->getApiKey();
+        $appCode = $this->omotechHelper->getAppCode();
 
         try {
             $url = sprintf("https://rpc-api.svc-nue.pushwoosh.com/api/tags?application=%s&page=0&perPage=1000", $appCode);
@@ -99,9 +99,9 @@ class Curl extends AbstractHelper
         int $platform,
         array $data = []
     ): array {
-        $apiUrl = $this->pushwooshHelper->getApiUrl();
-        $apiKey = $this->pushwooshHelper->getApiKey();
-        $appCode = $this->pushwooshHelper->getAppCode();
+        $apiUrl = $this->omotechHelper->getApiUrl();
+        $apiKey = $this->omotechHelper->getApiKey();
+        $appCode = $this->omotechHelper->getAppCode();
 
         $url = $apiUrl . '/json/1.3/registerDevice';
         $headers = $this->getHeaders($apiKey);
@@ -136,9 +136,9 @@ class Curl extends AbstractHelper
         string $userId,
         array $data = []
     ): array {
-        $apiUrl = $this->pushwooshHelper->getApiUrl();
-        $apiKey = $this->pushwooshHelper->getApiKey();
-        $appCode = $this->pushwooshHelper->getAppCode();
+        $apiUrl = $this->omotechHelper->getApiUrl();
+        $apiKey = $this->omotechHelper->getApiKey();
+        $appCode = $this->omotechHelper->getAppCode();
 
         $url = $apiUrl . '/json/1.3/postEvent';
         $headers = $this->getHeaders($apiKey);

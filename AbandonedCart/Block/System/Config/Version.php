@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Block\System\Config;
+namespace Omotech\AbandonedCart\Block\System\Config;
 
 /**
  * Config backend model for version display.
@@ -52,7 +52,7 @@ class Version extends \Magento\Framework\App\Config\Value
      */
     public function afterLoad()
     {
-        $version = $this->moduleResource->getDbVersion('Pushwoosh_AbandonedCart');
+        $version = $this->moduleResource->getDbVersion('Omotech_AbandonedCart');
 
         $this->setValue($version);
     }

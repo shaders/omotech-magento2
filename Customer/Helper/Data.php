@@ -1,17 +1,17 @@
 <?php
-namespace Pushwoosh\Customer\Helper;
+namespace Omotech\Customer\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\ScopeInterface;
-use Pushwoosh\Customer\Model\Config\CronConfig;
+use Omotech\Customer\Model\Config\CronConfig;
 use \Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 class Data extends AbstractHelper
 {
-    const PUSHWOOSH_CUSTOMER_SYNC = "pushwoosh/customer/sync";
-    const PUSHWOOSH_CUSTOMER_NUMBER_OF_CUSTOMERS = "pushwoosh/customer/number_of_customers";
-    const PUSHWOOSH_CUSTOMER_UPDATE_LAST_SYNC = "pushwoosh/customer/last_customers_updated";
-    const PUSHWOOSH_CUSTOMER_MAP_CUSTOM_FIELDS = "pushwoosh/customer/map_custom_fields";
+    const OMOTECH_CUSTOMER_SYNC = "omotech/customer/sync";
+    const OMOTECH_CUSTOMER_NUMBER_OF_CUSTOMERS = "omotech/customer/number_of_customers";
+    const OMOTECH_CUSTOMER_UPDATE_LAST_SYNC = "omotech/customer/last_customers_updated";
+    const OMOTECH_CUSTOMER_MAP_CUSTOM_FIELDS = "omotech/customer/map_custom_fields";
 
     /**
      * @var \Magento\Framework\App\Config\ConfigResource\ConfigInterface
@@ -38,7 +38,7 @@ class Data extends AbstractHelper
     public function isCustomerSyncingEnabled($scopeCode = null)
     {
         return $this->scopeConfig->isSetFlag(
-            self::PUSHWOOSH_CUSTOMER_SYNC,
+            self::OMOTECH_CUSTOMER_SYNC,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -64,7 +64,7 @@ class Data extends AbstractHelper
     public function getNumberOfCustomers($scopeCode = null)
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_CUSTOMER_NUMBER_OF_CUSTOMERS,
+            self::OMOTECH_CUSTOMER_NUMBER_OF_CUSTOMERS,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -73,7 +73,7 @@ class Data extends AbstractHelper
     public function getLastCustomerUpdateSync($scopeCode = null)
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_CUSTOMER_UPDATE_LAST_SYNC,
+            self::OMOTECH_CUSTOMER_UPDATE_LAST_SYNC,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -82,7 +82,7 @@ class Data extends AbstractHelper
     public function getMapCustomFields($scopeCode = null)
     {
         return $this->scopeConfig->getValue(
-            self::PUSHWOOSH_CUSTOMER_MAP_CUSTOM_FIELDS,
+            self::OMOTECH_CUSTOMER_MAP_CUSTOM_FIELDS,
             ScopeInterface::SCOPE_STORES,
             $scopeCode
         );
@@ -91,6 +91,6 @@ class Data extends AbstractHelper
     public function setLastCustomerUpdateSync($date, $scopeCode = null)
     {
         $scope = \Magento\Framework\App\Config\ScopeConfigInterface::SCOPE_TYPE_DEFAULT;
-        $this->configInterface->saveConfig(self::PUSHWOOSH_CUSTOMER_UPDATE_LAST_SYNC, $date, $scope);
+        $this->configInterface->saveConfig(self::OMOTECH_CUSTOMER_UPDATE_LAST_SYNC, $date, $scope);
     }
 }

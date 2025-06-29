@@ -6,7 +6,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Pushwoosh_Core::config_pushwoosh" title="Pushwoosh Config" translate="title" sortOrder="60" />
+                            <resource id="Omotech_Core::config_omotech" title="Omotech Config" translate="title" sortOrder="60" />
                         </resource>
                     </resource>
                 </resource>

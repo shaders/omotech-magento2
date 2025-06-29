@@ -1,9 +1,9 @@
 <?php
 
-namespace Pushwoosh\AbandonedCart\Ui\Component\Listing\Column;
+namespace Omotech\AbandonedCart\Ui\Component\Listing\Column;
 
-use Pushwoosh\AbandonedCart\Block\System\Config\SyncAbandonedCartData;
-use Pushwoosh\AbandonedCart\Model\Config\CronConfig;
+use Omotech\AbandonedCart\Block\System\Config\SyncAbandonedCartData;
+use Omotech\AbandonedCart\Model\Config\CronConfig;
 
 use Magento\Ui\Component\Listing\Columns\Column;
 

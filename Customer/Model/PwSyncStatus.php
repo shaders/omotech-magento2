@@ -1,8 +1,8 @@
 <?php
 
-namespace Pushwoosh\Customer\Model;
+namespace Omotech\Customer\Model;
 
-use Pushwoosh\Customer\Model\Config\CronConfig;
+use Omotech\Customer\Model\Config\CronConfig;
 
 class PwSyncStatus extends  \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource implements \Magento\Framework\Data\OptionSourceInterface
 {

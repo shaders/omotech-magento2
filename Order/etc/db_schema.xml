@@ -2,9 +2,9 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <table name="sales_order" resource="sales" comment="Sales Flat Order Address">
-        <column xsi:type="int" name="pw_order_sync_status" nullable="false" default="0" comment="Pushwoosh Sync Status"/>
+        <column xsi:type="int" name="pw_order_sync_status" nullable="false" default="0" comment="Omotech Sync Status"/>
     </table>
     <table name="sales_order_grid" resource="sales" engine="innodb" comment="Sales Flat Order Grid">
-        <column xsi:type="int" name="pw_order_sync_status" nullable="false" default="0" comment="Pushwoosh Sync Status"/>
+        <column xsi:type="int" name="pw_order_sync_status" nullable="false" default="0" comment="Omotech Sync Status"/>
     </table>
 </schema>

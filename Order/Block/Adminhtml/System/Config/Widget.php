@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Order\Block\Adminhtml\System\Config;
+namespace Omotech\Order\Block\Adminhtml\System\Config;
 
 class Widget extends \Magento\Config\Block\System\Config\Form\Fieldset
 {

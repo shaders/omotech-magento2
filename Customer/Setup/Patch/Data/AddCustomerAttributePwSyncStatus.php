@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Customer\Setup\Patch\Data;
+namespace Omotech\Customer\Setup\Patch\Data;
 
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Setup\CustomerSetup;
@@ -58,14 +58,14 @@ class AddCustomerAttributePwSyncStatus implements DataPatchInterface, PatchRever
         /** @var $attributeSet Set */
         $attributeSet = $this->attributeSetFactory->create();
         $attributeGroupId = $attributeSet->getDefaultGroupId($attributeSetId);
-        if (!$customerSetup->getAttributeId(Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_SYNC_STATUS)) {
+        if (!$customerSetup->getAttributeId(Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_SYNC_STATUS)) {
             $customerSetup->addAttribute(
                 Customer::ENTITY,
-                \Pushwoosh\Customer\Model\Customer::PW_SYNC_STATUS,
+                \Omotech\Customer\Model\Customer::PW_SYNC_STATUS,
                 [
                     'type' => 'int',
                     'input' => 'hidden',
-                    'label' => 'Pushwoosh Sync Status',
+                    'label' => 'Omotech Sync Status',
                     'default' => 0,
                     'required' => false,
                     'visible' => false,
@@ -79,7 +79,7 @@ class AddCustomerAttributePwSyncStatus implements DataPatchInterface, PatchRever
                 ]
             );
 
-            $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_SYNC_STATUS);
+            $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_SYNC_STATUS);
             $attribute->addData([
                 'attribute_set_id' => $attributeSetId,
                 'attribute_group_id' => $attributeGroupId
@@ -95,7 +95,7 @@ class AddCustomerAttributePwSyncStatus implements DataPatchInterface, PatchRever
         $this->moduleDataSetup->getConnection()->startSetup();
         /** @var CustomerSetup $customerSetup */
         $customerSetup = $this->customerSetupFactory->create(['setup' => $this->moduleDataSetup]);
-        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, \Pushwoosh\Customer\Model\Customer::PW_SYNC_STATUS);
+        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, \Omotech\Customer\Model\Customer::PW_SYNC_STATUS);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

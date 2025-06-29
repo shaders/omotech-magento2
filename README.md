@@ -1,8 +1,7 @@
-## Pushwoosh extension for Magento2
+## Omo extension for Magento2
 <!--Name of the project -->
 
-Compatible with Community Edition, Commerce and Cloud.  
-Pushwoosh extension gives you cross channel marketing automation.
+Compatible with Community Edition, Commerce and Cloud.
 
 ### Features:
 * Customer sync
@@ -11,7 +10,7 @@ Pushwoosh extension gives you cross channel marketing automation.
 
 ### Composer install the package
 ```
-composer require pushwoosh/magento2-integration
+composer require omotech/magento2-integration
 ```
 Run Magento setup to install the module
 ```

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Customer\Block\Adminhtml\System\Config\Form\Field;
+namespace Omotech\Customer\Block\Adminhtml\System\Config\Form\Field;
 
 class CustomerCustomFields extends \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray
 {
@@ -25,7 +25,7 @@ class CustomerCustomFields extends \Magento\Config\Block\System\Config\Form\Fiel
         );
         $this->addColumn(
             'pw_customer_field_id',
-            ['label' => __('Pushwoosh'),
+            ['label' => __('Omotech'),
                 'renderer' => $this->getPwTags()]
         );
         $this->_addAfter = false;

@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <pushwoosh>
+        <omotech>
             <abandoned_cart>
                 <sync>0</sync>
                 <number_of_abandoned_cart>100</number_of_abandoned_cart>
@@ -13,6 +13,6 @@
                 <cron_weekday>*</cron_weekday>
                 <min_inactive_time>60</min_inactive_time>
             </abandoned_cart>
-        </pushwoosh>
+        </omotech>
     </default>
 </config>

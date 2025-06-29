@@ -1,8 +1,8 @@
 <?php
 
-namespace Pushwoosh\Customer\Cron;
+namespace Omotech\Customer\Cron;
 
-use Pushwoosh\Customer\Model\Customer;
+use Omotech\Customer\Model\Customer;
 
 
 class CustomerSync

@@ -1,16 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace Pushwoosh\Customer\Block\Adminhtml\System\Config;
+namespace Omotech\Customer\Block\Adminhtml\System\Config;
 
-use Pushwoosh\Customer\Model\Customer;
+use Omotech\Customer\Model\Customer;
 
 class CustomerSyncStatus extends \Magento\Backend\Block\Template
 {
     /**
      * @var string
      */
-    protected $_template = 'Pushwoosh_Customer::system/config/customer_sync_status.phtml';
+    protected $_template = 'Omotech_Customer::system/config/customer_sync_status.phtml';
 
     /**
      * @var int
@@ -135,7 +135,7 @@ class CustomerSyncStatus extends \Magento\Backend\Block\Template
         return $this->getCustomerCountHelper([
             $this->filterBuilder
                 ->setField(Customer::PW_SYNC_STATUS)
-                ->setValue(\Pushwoosh\Customer\Model\Config\CronConfig::SYNCED)
+                ->setValue(\Omotech\Customer\Model\Config\CronConfig::SYNCED)
                 ->setConditionType('eq')
                 ->create()
         ]);
@@ -153,7 +153,7 @@ class CustomerSyncStatus extends \Magento\Backend\Block\Template
             [
                 $this->filterBuilder
                     ->setField(Customer::PW_SYNC_STATUS)
-                    ->setValue(\Pushwoosh\Customer\Model\Config\CronConfig::NOT_SYNCED)
+                    ->setValue(\Omotech\Customer\Model\Config\CronConfig::NOT_SYNCED)
                     ->setConditionType('eq')
                     ->create(),
                 $this->filterBuilder
@@ -176,7 +176,7 @@ class CustomerSyncStatus extends \Magento\Backend\Block\Template
         return $this->getCustomerCountHelper([
             $this->filterBuilder
                 ->setField(Customer::PW_SYNC_STATUS)
-                ->setValue(\Pushwoosh\Customer\Model\Config\CronConfig::FAIL_SYNCED)
+                ->setValue(\Omotech\Customer\Model\Config\CronConfig::FAIL_SYNCED)
                 ->setConditionType('eq')
                 ->create()
         ]);

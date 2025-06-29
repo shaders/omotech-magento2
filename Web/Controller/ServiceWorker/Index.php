@@ -1,6 +1,6 @@
 <?php
 
-namespace Pushwoosh\Web\Controller\ServiceWorker;
+namespace Omotech\Web\Controller\ServiceWorker;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
