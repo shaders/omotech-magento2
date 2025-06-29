@@ -4,7 +4,7 @@
     </head>
     <body>
         <referenceBlock name="head.additional">
-            <block class="Omotech\Web\Block\OmotechWeb" name="omotech_web" template="Omotech_Web::pw.phtml" cacheable="false"/>
+            <block class="Omotech\Web\Block\OmotechWeb" name="omotech_web" template="Omotech_Web::pw.phtml"/>
         </referenceBlock>
     </body>
 </page>
