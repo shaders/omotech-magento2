@@ -1,5 +1,5 @@
 {
-    "name": "omotech/order",
+    "name": "omo-tech/order",
     "description": "Omotech Order",
     "type": "magento2-module",
     "license": [
@@ -12,7 +12,7 @@
     "version": "1.0.2",
     "require": {
         "php": "~8.0||~8.1||~8.2||~8.3||~8.4",
-        "omotech/core": "1.0.*"
+        "omo-tech/core": "1.0.*"
     },
     "autoload": {
         "files": [

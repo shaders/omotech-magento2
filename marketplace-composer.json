@@ -1,5 +1,5 @@
 {
-  "name": "omotech/magento2-integration",
+  "name": "omo-tech/magento2-integration",
   "description": "Omotech extension for Magento 2.3 and 2.4",
   "type": "metapackage",
   "version": "1.0.0",
@@ -7,10 +7,10 @@
     "OSL-3.0"
   ],
   "require": {
-    "omotech/core": "1.0.*",
-    "omotech/customer": "1.0.*",
-    "omotech/abandonedcart": "1.0.*",
-    "omotech/order": "1.0.*",
-    "omotech/web": "1.0.*"
+    "omo-tech/core": "1.0.*",
+    "omo-tech/customer": "1.0.*",
+    "omo-tech/abandonedcart": "1.0.*",
+    "omo-tech/order": "1.0.*",
+    "omo-tech/web": "1.0.*"
   }
 }
